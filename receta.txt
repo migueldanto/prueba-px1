@@ -1,3 +1,5 @@
+--------------------------------------------------------------------
+
 #crear el proyecto
 
 mkdir gema
@@ -8,3 +10,24 @@ django-admin startproject gema $(pwd)
 python manage.py startapp web
 
 vue create front-src --no-git
+
+
+-------------------------------------------------------------------
+## al desarrollar
+
+#si estas modificando el front, y aun asi necesitas los servicios que levanta el back
+**terminal 1
+cd front-src
+npm run build-watch
+
+**terminal 2
+python manage.py runserver
+
+
+#si estas modificando el back, aun asi necesitas las vistas que levanta el front (sin editar fron activamente)
+**terminal 1
+cd front-src
+npm run build
+
+**terminal 2
+python manage.py runserver

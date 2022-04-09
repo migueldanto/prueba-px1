@@ -5,6 +5,11 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "build-development": "vue-cli-service build --mode development",
+    "serve-production": "vue-cli-service serve --mode production",
+    "build-django": "VUE_CLI_SERVICE_CONFIG_PATH=$PWD/vue.config.django.js vue-cli-service build --mode development ",
+    "build-django-production": "VUE_CLI_SERVICE_CONFIG_PATH=$PWD/vue.config.django.js vue-cli-service build --mode production",
+    "serve-django": "VUE_CLI_SERVICE_CONFIG_PATH=$PWD/vue.config..django.js vue-cli-service build --watch",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
