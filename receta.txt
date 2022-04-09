@@ -18,7 +18,7 @@ vue create front-src --no-git
 #si estas modificando el front, y aun asi necesitas los servicios que levanta el back
 **terminal 1
 cd front-src
-npm run build-watch
+npm run serve-django
 
 **terminal 2
 python manage.py runserver

@@ -9,7 +9,7 @@
     "serve-production": "vue-cli-service serve --mode production",
     "build-django": "VUE_CLI_SERVICE_CONFIG_PATH=$PWD/vue.config.django.js vue-cli-service build --mode development ",
     "build-django-production": "VUE_CLI_SERVICE_CONFIG_PATH=$PWD/vue.config.django.js vue-cli-service build --mode production",
-    "serve-django": "VUE_CLI_SERVICE_CONFIG_PATH=$PWD/vue.config..django.js vue-cli-service build --watch",
+    "serve-django": "VUE_CLI_SERVICE_CONFIG_PATH=$PWD/vue.config.django.js vue-cli-service build --mode development --watch",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
