@@ -27,7 +27,24 @@ python manage.py runserver
 #si estas modificando el back, aun asi necesitas las vistas que levanta el front (sin editar fron activamente)
 **terminal 1
 cd front-src
-npm run build
+npm run build-django
 
 **terminal 2
 python manage.py runserver
+
+
+--------------------------------------------------------------------
+levantar otros servicios
+
+docker run -d --name gema-geoserver -e GEOSERVER_ADMIN_USER=miguel -e GEOSERVER_ADMIN_PASSWORD=miguelon --network="host" -v v-gema-geoserver:/opt/geoserver/data_dir  kartoza/geoserver:2.18.0
+
+docker run -d --name gema-postgis -e POSTGRES_USER=miguel -e POSTGRES_PASSWORD=miguelon -e POSTGRES_DB=gemav1 -v v-gema-postgis:/var/lib/postgresql/data --network="host" postgis/postgis:12-3.2
+
+
+podman stop gema-geoserver
+podman rm gema-geoserver
+podman volume rm v-gema-geoserver
+
+podman stop gema-postgis
+podman rm gema-postgis
+podman volume rm v-gema-postgis
